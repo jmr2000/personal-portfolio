@@ -1,0 +1,194 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+
+html body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+/* nav bar */
+#navbar {
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    background-color: #c23616;
+    justify-content: flex-end;
+    height: 60px;
+    border-bottom: 2px black solid;
+}
+
+#navbar ul {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    align-items: center;
+}
+
+#navbar li {
+    height: 100%;
+}
+
+#navbar li:hover {
+    background-color: #e84118;
+}
+
+#navbar li a{
+    color: #f5f6fa;
+    padding: 0px 20px 12px 20px;
+    font-size: 24px; 
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Welcome Section */
+#welcome-section {
+    background-color:#2f3640;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#welcome-section h1 {
+    color: #f5f6fa;
+    font-size: 50px;
+}
+
+#welcome-section p {
+    color: #c0392b;
+    font-size: 30px;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+/* Projects Section */
+#projects {
+    background-color: #718093;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+#projects h2 {
+    color: #f5f6fa;
+    font-size: 32px;
+}
+#projects hr {
+    width: 60%;
+    margin: 15px auto 50px auto;
+}
+
+#project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px, 1fr));
+    grid-gap: 2em;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 5em;
+}
+.project-tile {
+    background-color: #273c75;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+.project-image {
+    width: 100%;
+    object-fit: cover;
+}
+
+.project-tile p {
+    color: #f5f6fa;
+    font-size: 20px;
+    padding: 2rem 0.5rem;
+}
+
+.code {
+    color: #192a56;
+    transition: color 0.3s ease-out
+}
+
+.project-tile:hover .code {
+    color: #c23616;
+}
+
+
+.btn-show-all{
+    text-decoration: none;
+    color: #f5f6fa;
+    font-size: 24px;
+    background-color: #273c75;
+    padding: 10px 20px;
+    width: 250px;
+    height: 50px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn-show-all:hover {
+    background-color: #c23616;
+    cursor: pointer;
+}
+
+/* contant */
+#contact{
+    background-color: #2f3640;
+}
+
+#contact h2 {
+    text-align: center;
+    padding: 40px 0px;
+    font-size: 32px;
+    color:#f5f6fa;
+}
+
+#contact-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.profile-link {
+    color: #f5f6fa;
+    text-decoration: none;
+    padding: 0px 20px 20px 20px;
+    font-size: 24px;
+}
+
+.fab {
+    font-family: "Font Awesome 5 Brands";
+}
+
+.fa-github:before{
+    content: "\f09b";
+}
+
+@media (max-width: 625px){
+    #navbar {
+        justify-content: center;
+        font-size: 10px;
+    }
+
+    #navbar ul{
+        padding: 0px;
+    }
+
+    #projects {
+        padding: 6rem 1rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1rem;
+        justify-items: center;
+    }
+
+    .profile-link span{
+        display: none;
+    }
+    
+}
